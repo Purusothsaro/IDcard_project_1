@@ -1,0 +1,29 @@
+/* src/component/Idcard/Idcard.css */
+
+.idcard-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.idcard-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.idcard-item:hover {
+  transform: scale(1.05);
+}
+
+.idcard-image {
+  width: 100%;
+  height: auto;
+}
+
+.idcard-description {
+  padding: 8px;
+  text-align: center;
+}
