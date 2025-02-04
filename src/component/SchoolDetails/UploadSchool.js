@@ -22,7 +22,7 @@ const UploadSchool = () => {
 
   return (
     <div className="container mt-4">
-      <div className="card p-4 shadow-lg rounded">
+      <div className="card p-4  rounded">
         <div className="card-header bg-primary text-white d-flex justify-content-between">
           <strong>Upload School Master</strong>
           <a
