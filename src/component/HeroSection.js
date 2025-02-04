@@ -4,9 +4,7 @@ function HeroSection() {
       <div className="container py-5">
         <div className="row align-items-center">
           <div className="col-lg-6 text-start">
-            <h1 className="display-4 fw-bold mb-4 text-white">
-              IDEMTA - Identity Card Solution
-            </h1>
+            <h1 className="display-4 fw-bold mb-4 text-white">OctoGenie</h1>
             <p className="lead mb-4 text-white">
               A complete cloud-based ID card software for online digital
               collection of school/office data, data storage and management,

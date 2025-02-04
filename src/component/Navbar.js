@@ -5,7 +5,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg sticky-top">
       <div className="container">
         <a className="navbar-brand fw-bold" href="/">
-          <i className="bi bi-card-heading"></i> IDEMTA
+          <i className="bi bi-card-heading"></i> OctoGenie
         </a>
         <button
           className="navbar-toggler"

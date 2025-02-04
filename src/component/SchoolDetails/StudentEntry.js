@@ -12,7 +12,9 @@ const StudentEntry = () => {
                 {/* Form fields for adding a school */}
                 <div className="row mb-3">
                   <div className="col-md-6">
-                    <label className="form-label mandatory">City</label>
+                    <label className="form-label mandatory">
+                      City <span style={{ color: "red" }}>*</span>
+                    </label>
                     <select className="form-control mandatory" required>
                       <option value="">Select City</option>
                       <option value="city1">City 1</option>
@@ -21,7 +23,9 @@ const StudentEntry = () => {
                     </select>
                   </div>
                   <div className="col-md-6">
-                    <label className="form-label">School</label>
+                    <label className="form-label">
+                      School <span style={{ color: "red" }}>*</span>
+                    </label>
                     <select className="form-control" required>
                       <option value="">Select School</option>
                       <option value="school1">School 1</option>

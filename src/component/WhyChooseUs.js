@@ -69,7 +69,7 @@ const WhyChooseUs = () => {
             <span className="text-primary text-uppercase">Benefits</span>
             <h2 className="display-5 mb-4">Why Choose Us?</h2>
             <p className="lead">
-              With advanced technology, IDEMTA provides comprehensive ID card
+              With advanced technology, OctoGenie provides comprehensive ID card
               solutions that streamline your operations
             </p>
           </div>

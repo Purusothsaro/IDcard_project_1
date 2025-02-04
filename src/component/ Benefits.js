@@ -65,7 +65,7 @@ function Benefits() {
         <div className="row justify-content-center">
           <div className="col-lg-8 text-center mb-5">
             <span className="text-primary text-uppercase">Advantages</span>
-            <h2 className="display-5">Benefits of using IDEMTA</h2>
+            <h2 className="display-5">Benefits of using OctoGenie</h2>
             <p className="lead">
               Discover how our comprehensive solution can transform your ID card
               management

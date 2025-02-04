@@ -23,7 +23,7 @@ const UploadSchool = () => {
   return (
     <div className="container mt-4">
       <div className="card p-4 shadow-lg rounded">
-        <div className="card-header bg-danger text-white d-flex justify-content-between">
+        <div className="card-header bg-primary text-white d-flex justify-content-between">
           <strong>Upload School Master</strong>
           <a
             href="/path-to-template.xlsx"

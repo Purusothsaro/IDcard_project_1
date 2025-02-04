@@ -4,10 +4,7 @@ function TopBar() {
       <div className="container d-flex justify-content-between">
         <div>
           <a href="mailto:contact@idemta.com">
-            <i className="bi bi-envelope"></i> contact@idemta.com
-          </a>
-          <a href="tel:+918010502950">
-            <i className="bi bi-telephone"></i> +91 8010502950
+            <i className="bi bi-envelope"></i> idsupport@octogenie.com
           </a>
         </div>
         <div>

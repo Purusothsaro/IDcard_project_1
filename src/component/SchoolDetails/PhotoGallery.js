@@ -12,7 +12,9 @@ const PhotoGALLERY = () => {
                 {/* Form fields for adding a school */}
                 <div className="row mb-3">
                   <div className="col-md-4">
-                    <label className="form-label mandatory">Upload Type</label>
+                    <label className="form-label mandatory">
+                      Upload Type <span style={{ color: "red" }}>*</span>
+                    </label>
                     <select className="form-control mandatory" required>
                       <option value="Student">Student</option>
                       <option value="Staff">Staff</option>
@@ -20,7 +22,9 @@ const PhotoGALLERY = () => {
                     </select>
                   </div>
                   <div className="col-md-4">
-                    <label className="form-label mandatory">City</label>
+                    <label className="form-label mandatory">
+                      City <span style={{ color: "red" }}>*</span>
+                    </label>
                     <select className="form-control mandatory" required>
                       <option value="">Select City</option>
                       <option value="city1">City 1</option>
@@ -29,7 +33,9 @@ const PhotoGALLERY = () => {
                     </select>
                   </div>
                   <div className="col-md-4">
-                    <label className="form-label">School</label>
+                    <label className="form-label">
+                      School <span style={{ color: "red" }}>*</span>
+                    </label>
                     <select className="form-control" required>
                       <option value="">Select School</option>
                       <option value="school1">School 1</option>

@@ -13,6 +13,7 @@ import UploadStudentStaff from "../SchoolDetails/UploadStudentStaff";
 import UploadImage from "../SchoolDetails/UploadImage";
 import UploadSchool from "../SchoolDetails/UploadSchool";
 import AllSchoolList from "../SchoolDetails/AllSchoolList";
+import CreateSchool from "../SchoolDetails/CreateSchool";
 
 function Dashboard() {
   const [expandedItems, setExpandedItems] = useState([]);
@@ -46,6 +47,8 @@ function Dashboard() {
         return <UploadSchool />;
       case "All-SchoolList":
         return <AllSchoolList />;
+      case "Create-School":
+        return <CreateSchool />;
 
       case "dashboard":
         return (
