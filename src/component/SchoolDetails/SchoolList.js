@@ -38,6 +38,15 @@ const SchoolList = () => {
     // Logic for pagination can be added here
   };
 
+  const deleteSchool = (id) => {
+    setSchools(schools.filter((school) => school.id !== id));
+  };
+
+  const editSchool = (id) => {
+    // Logic for editing a school can be added here
+    console.log(`Edit school with id: ${id}`);
+  };
+
   return (
     <>
       <h2 className="text mb-3">School List</h2>
@@ -121,6 +130,7 @@ const SchoolList = () => {
             {schools.map(
               (
                 {
+                  id,
                   schoolName,
                   address,
                   principalName,
@@ -142,9 +152,17 @@ const SchoolList = () => {
                   <td>
                     <Button
                       variant="warning"
-                      aria-label={`Details for ${schoolName}`}
+                      onClick={() => editSchool(id)}
+                      aria-label={`Edit ${schoolName}`}
                     >
-                      Details
+                      Edit
+                    </Button>
+                    <Button
+                      variant="danger"
+                      onClick={() => deleteSchool(id)}
+                      aria-label={`Delete ${schoolName}`}
+                    >
+                      Delete
                     </Button>
                   </td>
                 </tr>
