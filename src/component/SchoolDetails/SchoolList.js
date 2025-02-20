@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Table, Form, Button, InputGroup } from "react-bootstrap";
+import { db } from "../../firebaseconfig";
+import { collection, getDocs } from "firebase/firestore";
 
 const initialSchools = [
   {
@@ -17,6 +19,20 @@ const SchoolList = () => {
   const [search, setSearch] = useState("");
   const [entries, setEntries] = useState(10);
   const [schools, setSchools] = useState(initialSchools);
+
+  useEffect(() => {
+    const fetchSchools = async () => {
+      const schoolsCollection = collection(db, "schools");
+      const schoolSnapshot = await getDocs(schoolsCollection);
+      const schoolList = schoolSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setSchools(schoolList);
+    };
+
+    fetchSchools();
+  }, []);
 
   const handlePagination = (direction) => {
     // Logic for pagination can be added here
@@ -93,11 +109,11 @@ const SchoolList = () => {
             <tr>
               <th>School Name</th>
               <th>Address</th>
-              <th>Branch Code</th>
               <th>Principal Name</th>
               <th>City</th>
               <th>District</th>
               <th>Pin Code</th>
+              <th>Person 1 Name</th>
               <th>Details</th>
             </tr>
           </thead>
@@ -105,28 +121,28 @@ const SchoolList = () => {
             {schools.map(
               (
                 {
-                  name,
+                  schoolName,
                   address,
-                  branchCode,
-                  principal,
+                  principalName,
                   city,
                   district,
                   pincode,
+                  contactPerson1Name,
                 },
                 index
               ) => (
                 <tr key={index}>
-                  <td>{name}</td>
+                  <td>{schoolName}</td>
                   <td>{address}</td>
-                  <td>{branchCode}</td>
-                  <td>{principal}</td>
+                  <td>{principalName}</td>
                   <td>{city}</td>
                   <td>{district}</td>
                   <td>{pincode}</td>
+                  <td>{contactPerson1Name}</td>
                   <td>
                     <Button
                       variant="warning"
-                      aria-label={`Details for ${name}`}
+                      aria-label={`Details for ${schoolName}`}
                     >
                       Details
                     </Button>

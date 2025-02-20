@@ -461,7 +461,7 @@ function Dashboard() {
                 Hi, saavikka!
               </a>
               <ul
-                className="dropdown-menu dropdown-menu-end"
+                className="dropdown-menu dropdown-menu-end "
                 aria-labelledby="dropdownMenuLink"
               >
                 <li>
