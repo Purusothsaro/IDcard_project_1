@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Table, Form, Button, InputGroup } from "react-bootstrap";
 import { db } from "../../firebaseconfig";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 
 const initialSchools = [
   {
@@ -38,7 +38,12 @@ const SchoolList = () => {
     // Logic for pagination can be added here
   };
 
-  const deleteSchool = (id) => {
+  const deleteSchool = async (id) => {
+    // Remove the school from Firebase
+    const schoolDoc = doc(db, "schools", id);
+    await deleteDoc(schoolDoc);
+
+    // Update the local state to remove the school
     setSchools(schools.filter((school) => school.id !== id));
   };
 
